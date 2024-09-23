@@ -1,0 +1,8 @@
+Nguyễn Văn A;2000-05-20 00:00:00;Hà Nội, Việt Nam;170;65;SV12345678;Đại học Bách Khoa;2018;8.5
+Trần Thị B;2001-08-15 00:00:00;Hà Nội, Việt Nam;160;50;SV87654321;Đại học Kinh tế Quốc dân;2019;9
+Phạm Văn C;1999-03-12 00:00:00;Đà Nẵng, Việt Nam;175;70;SV34567890;Đại học Đà Nẵng;2017;7.5
+Lê Thị D;2002-11-30 00:00:00;Cần Thơ, Việt Nam;162;55;SV09876543;Đại học Cần Thơ;2020;6.8
+Ngô Văn E;2000-04-01 00:00:00;Hải Phòng, Việt Nam;168;62;SV56789012;Đại học Hàng Hải;2018;5.4
+Vũ Thị F;2001-09-09 00:00:00;Huế, Việt Nam;158;48;SV67890123;Đại học Huế;2019;9.3
+Nguyễn Văn G;1998-07-23 00:00:00;TP. Hồ Chí Minh, Việt Nam;180;75;SV78901234;Đại học Khoa học Tự nhiên;2016;4
+Trần Thị H;2003-12-19 00:00:00;Hà Nội, Việt Nam;155;45;SV89012345;Đại học Ngoại Thương;2021;2.1

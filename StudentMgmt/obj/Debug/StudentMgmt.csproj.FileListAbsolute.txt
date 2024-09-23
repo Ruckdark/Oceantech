@@ -1,0 +1,7 @@
+D:\IT\Programming language\C#\MyProjects\Oceantech\StudentMgmt\bin\Debug\StudentMgmt.exe.config
+D:\IT\Programming language\C#\MyProjects\Oceantech\StudentMgmt\bin\Debug\StudentMgmt.exe
+D:\IT\Programming language\C#\MyProjects\Oceantech\StudentMgmt\bin\Debug\StudentMgmt.pdb
+D:\IT\Programming language\C#\MyProjects\Oceantech\StudentMgmt\obj\Debug\StudentMgmt.csproj.AssemblyReference.cache
+D:\IT\Programming language\C#\MyProjects\Oceantech\StudentMgmt\obj\Debug\StudentMgmt.csproj.CoreCompileInputs.cache
+D:\IT\Programming language\C#\MyProjects\Oceantech\StudentMgmt\obj\Debug\StudentMgmt.exe
+D:\IT\Programming language\C#\MyProjects\Oceantech\StudentMgmt\obj\Debug\StudentMgmt.pdb
