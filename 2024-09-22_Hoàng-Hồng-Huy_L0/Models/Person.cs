@@ -21,27 +21,7 @@ namespace StudentMgmt.Models
         }
         public Person(string fullName, DateTime dateOfBirth, string address, float? height = null, float? weight = null)
         {
-            Id = ++idCounter;
-            if (string.IsNullOrEmpty(fullName) || fullName.Length >= 100)
-            {
-                throw new ArgumentException("Ten khong hop le");
-            }
-            if (dateOfBirth == null || dateOfBirth.Year < 1900)
-            {
-                throw new ArgumentException("Ngay sinh phai tu nam 1900 tro len");
-            }
-            if (address.Length >= 300)
-            {
-                throw new ArgumentException("Dia chi khong hop le");
-            }
-            if (height < 50.0f || height > 300.0f)
-            {
-                throw new ArgumentException("");
-            }
-            if (weight < 5.0f || weight > 1000.0f)
-            {
-                throw new ArgumentException("");
-            }
+            Id = ++idCounter;            
             FullName = fullName;
             DateOfBirth = dateOfBirth;
             Address = address;

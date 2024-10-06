@@ -9,7 +9,7 @@ namespace StudentMgmt.Models
 {
     internal class Student : Person
     {
-        public string StudentId {  get; set; }
+        public string StudentId { get; set; }
         public string University { get; set; }
         public int YearOfStartingUniversity { get; set; }
         public float GPA { set; get; }
@@ -31,23 +31,16 @@ namespace StudentMgmt.Models
                     return AcademicPerformance.Excellent;
             }
         }
-        
-       
+
+
 
         public Student()
         {
-            
+
         }
-        public Student(string name, DateTime dateOfBirth, string address, float height, float weight, string studentId, string university, int yearOfStartingUniversity, float gPA) : base (name, dateOfBirth, address, height, weight)
+        public Student(string name, DateTime dateOfBirth, string address, float height, float weight, string studentId, string university, int yearOfStartingUniversity, float gPA) : base(name, dateOfBirth, address, height, weight)
         {
-            if (string.IsNullOrEmpty(studentId) || studentId.Length < 10)
-                throw new ArgumentException("Mã sinh viên phải là chuỗi 10 ký tự");
-            if (string.IsNullOrEmpty(university) || university.Length >= 200)
-                throw new ArgumentException("Tên trường quá dài");
-            if (yearOfStartingUniversity < 1900 || yearOfStartingUniversity > DateTime.Now.Year)
-                throw new ArgumentException("Năm bắt đầu học không hợp lệ");
-            if (GPA < 0.0f || GPA > 10.0f)
-                throw new ArgumentException("Điểm trung bình phải từ 0.0 đến 10.0");
+
             StudentId = studentId;
             University = university;
             YearOfStartingUniversity = yearOfStartingUniversity;
@@ -59,52 +52,28 @@ namespace StudentMgmt.Models
         }
         public static Student CreateStudent()
         {
-            Student s = null;
+            Student student = null;
             try
             {
-                Console.Write("Enter name: ");
-                string name = Console.ReadLine();
-
-                Console.Write("Enter date of birth (dd/MM/yyyy): ");
-                DateTime dateOfBirth = DateTime.ParseExact(Console.ReadLine(), "dd/MM/yyyy", null);
-
-                Console.Write("Enter address: ");
-                string address = Console.ReadLine();
-
-                Console.Write("Enter height (cm): ");
-                float height = float.Parse(Console.ReadLine());
-
-                Console.Write("Enter weight (kg): ");
-                float weight = float.Parse(Console.ReadLine());
-
-                Console.Write("Enter student id (10 ký tự): ");
-                string studentId = Console.ReadLine();
-
-                Console.Write("University: ");
-                string university = Console.ReadLine();
-
-                Console.Write("Enter year of study start: ");
-                int startYear = int.Parse(Console.ReadLine());
-
-                Console.Write("Enter GPA: ");
-                float gpa = float.Parse(Console.ReadLine());
-
-                
-
-                s = new Student(name, dateOfBirth, address, height, weight, studentId, university, startYear, gpa);
-                
+                student = new Student(
+                Input.ReadName(),
+                Input.ReadDateOfBirth(),
+                Input.ReadAddress(),
+                Input.ReadHeight(),
+                Input.ReadWeight(),
+                Input.ReadStudentId(),
+                Input.ReadUniversity(),
+                Input.ReadStartYear(),
+                Input.ReadGPA()
+            );
             }
             catch (ArgumentException ex)
             {
                 Console.WriteLine($"Error: {ex.Message}");
             }
-            catch (FormatException)
-            {
-                Console.WriteLine("Data format error.");
-            }
-            return s;
+            return student;
         }
-        
+
         public enum AcademicPerformance
         {
             Poor,

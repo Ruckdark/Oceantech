@@ -14,18 +14,9 @@ namespace StudentMgmt
         private static int studentCount = 0;
 
         public static void AddStudentList(Student student)
-        {           
-            //students[studentCount] = student;
+        {
             students.Add(student);
             studentCount++;
-
-            //Console.WriteLine("Succeeded:");
-            // Console.WriteLine(student.ToString());
-            
-            //else
-            //{
-            //    Console.WriteLine("Danh sách sinh viên đã đầy.");
-            //}
         }
         public static void DisplayAllStudents()
         {
@@ -162,37 +153,31 @@ namespace StudentMgmt
             if (student != null)
             {
                 Console.WriteLine("Cập nhật thông tin cho sinh viên ID: " + id);
-                Console.Write("Nhập tên mới: ");
-                student.FullName = Console.ReadLine();
 
-                Console.Write("Nhập ngày sinh mới (dd/MM/yyyy): ");
-                student.DateOfBirth = DateTime.ParseExact(Console.ReadLine(), "dd/MM/yyyy", null);
+                student.FullName = Input.ReadName();
 
-                Console.Write("Nhập địa chỉ mới: ");
-                student.Address = Console.ReadLine();
+                student.DateOfBirth = Input.ReadDateOfBirth();
 
-                Console.Write("Nhập chiều cao mới (cm): ");
-                student.Height = float.Parse(Console.ReadLine());
+                student.Address = Input.ReadAddress();
 
-                Console.Write("Nhập cân nặng mới (kg): ");
-                student.Weight = float.Parse(Console.ReadLine());
+                student.Height = Input.ReadHeight();
 
-                Console.Write("Nhập trường đại học mới: ");
-                student.University = Console.ReadLine();
+                student.Weight = Input.ReadWeight();
 
-                Console.Write("Nhập năm bắt đầu mới: ");
-                student.YearOfStartingUniversity = int.Parse(Console.ReadLine());
+                student.University = Input.ReadUniversity();
 
-                Console.Write("Nhập GPA mới: ");
-                student.GPA = float.Parse(Console.ReadLine());
+                student.YearOfStartingUniversity = Input.ReadStartYear();
+
+                student.GPA = Input.ReadGPA();
 
                 Console.WriteLine("Cập nhật thành công.");
             }
             else
             {
-                Console.WriteLine("Not found");
+                Console.WriteLine("Sinh viên không được tìm thấy.");
             }
         }
+
         public static void DeleteStudentById(string id)
         {
 
